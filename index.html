@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>SPACE GAME - Jogo das Naves!</title>
+</head>
+
+<body>
+    <div id="container"> 
+
+        <div id="fundoGame"> <!--inserir todos os elementos do jogo dentro desta div-->
+
+            <div id="inicio">                
+                <h1>
+                    SPACE GAME
+                    <i class="fas fa-user-astronaut"></i>
+                </h1>
+                <p>Utilize a tecla <font color="red"><i class="fas fa-arrow-up"></i></font> para movimentar a nave para cima, a tecla <font color="red"><i class="fas fa-arrow-down"></i></i></font> para baixo e a tecla <font color="red">ESPAÇO</font> para atirar</p>
+
+                <p>Dispare contra os inimigos   <font color="red"> <i class="fas fa-check"></i> </font> </p>
+
+                <p>Evite colisoes  <font color="red"> <i class="fas fa-check"> </i></font></p>
+
+                <p>Salve seu amiguinho   <font color="red"> <i class="fas fa-check"> </i></font></p>  
+
+                <button role="button" id="btn" onclick="start()">
+                    START
+                    <i class="fab fa-reddit-alien"></i>
+                </button>
+                                 
+            </div>
+
+        </div>
+        
+
+    </div>
+    <!--arquivos sonoros-->
+    <audio src="sound/disparo.mp3" preload="auto" id="somDisparo"></audio>
+    <audio src="sound/explosao.mp3" preload="auto" id="somExplosao"></audio>
+    <audio src="sound/musicGame.mp3" preload="auto" id="musica"></audio>
+    <audio src="sound/gameover.mp3" preload="auto" id="somGameover"></audio>
+    <audio src="sound/morte.mp3" preload="auto" id="somPerdido"></audio>
+    <audio src="sound/resgate.mp3" preload="auto" id="somResgate"></audio>
+
+
+    <!--chamar arquivos JS-->
+    <script src="https://kit.fontawesome.com/af013d8f14.js" crossorigin="anonymous"></script>
+    <script src="frameworks/jquery-3.6.0.js"></script>    
+    <script src="frameworks/jquery-collision.min.js"></script>
+    
+    <script src="main.js"></script> 
+</body>
+<footer><p><b> Projeto "Construindo seu primeiro jogo de Naves" desenvolvido para o Bootcamp Java Game Developer da Digital Innovation One <p>By: Samantha Bertozzi</p> </b></footer>
+
+</html>

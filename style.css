@@ -1,0 +1,380 @@
+
+/*-----------------FONT-FAMILY-EXTERNA--------------------*/
+
+@font-face { 
+    font-family: font-game;
+    src: url(font/games-webfont.woff);
+}
+
+/*-------------------LAYOUT Inicial-----------------------*/
+
+body {
+    background-image:url("img/img_black.png");
+    font-family: font-game;
+    color: white;
+    padding: 10px;
+}
+
+#container {   
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fundoGame {
+    background-image: url("img/img_black.png");
+    background-size: cover;
+    width: 950px;
+    height: 630px;     
+   
+}
+
+#inicio { 
+    font-size: 20px;
+    text-align: center;
+    width: 480px;
+    height: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 15px;   
+        
+}
+/*-----------------Titulo Game----------------------*/
+
+#inicio h1 { 
+    font-family: font-game;
+    font-size: 60px;
+    color: white;
+}
+/*------------------BOTAO START---------------------*/
+
+#btn { 
+    font-family: font-game;
+    font-size: 30px;
+    background-color: black;   
+    color: red; 
+    border: solid;
+    cursor: pointer; 
+}
+
+#btn:hover {
+    background-color: white;
+    color: red;
+}
+
+/*--------------ELEMENTOS: IMAGENS-------------------*/
+
+#jogador {
+    background-image: url("img/nave_mov.png");
+    background-size: 150px;   
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 50px;
+    top:100px; 
+   
+}
+
+#et {
+    background-image: url("img/alien_mov.png");
+    background-size: 105px;
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    left: 15px;
+    top: 350px;   
+    
+}                                             
+#inimigo-1 {
+    background-image: url("img/nave_inimigo.png");
+    background-size: 150px;   
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left:730px;
+    top: 100px; 
+   
+}                            
+                                                
+#inimigo-2 {
+    background-image: url("img/nave_inimigo.png");
+    background-size: 150px;   
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    left: 775px;
+    top: 330px;
+  
+}
+
+#disparo {
+    background-image: url("img/img_disparo.png");
+    background-size: 25px;
+    width: 25px;
+    height: 4px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    left: 130px;
+    top: 90px;  
+}
+
+#explosao1 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+}
+
+#explosao2 {
+    width: 15px;
+    height: 87px;
+    position: absolute;
+}
+
+#explosao3 {   
+    position: absolute;
+}
+
+/*---------------CLASSES: ANIMACOES + KEYFRAMES------*/
+
+/*JOGADOR*/
+
+.anima-1 { 
+    /*keyframe + tempo + passos(img) + looping*/
+    background-image: url("img/nave_mov.png");
+    animation: play .5s steps(2) infinite; 
+    /*outros navegadores - ajustar*/
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+     -o-animation: play .5s steps(2) infinite;
+}
+    
+@keyframes play { 
+    from {background-position: 0px;} 
+    to {background-position: -150px;} 
+}
+ @-webkit-keyframes play 
+{
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+ 
+ @-moz-keyframes play 
+ {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+ 
+ @-ms-keyframes play 
+ {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+ 
+ @-o-keyframes play 
+ {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+
+ /*ET*/
+
+ .anima-2 { 
+    background-image: url("img/alien_mov.png");
+    animation: play2 .15s steps(3) infinite; 
+    
+    -webkit-animation: play2 .9s steps(3) infinite;
+    -moz-animation: play2 .9s steps(3) infinite;
+    -ms-animation: play2 .9s steps(3) infinite;
+     -o-animation: play2 .9s steps(3) infinite;
+}
+    
+@keyframes play2 { 
+    from {background-position: 0px;} 
+    to {background-position: -105px;} 
+}
+
+ @-webkit-keyframes play2 
+{
+    from {background-position: 0px;} 
+    to {background-position: -105px;} 
+ }
+ 
+ @-moz-keyframes play2 
+ { 
+    from {background-position: 0px;} 
+    to {background-position: -105px;} 
+ }
+ 
+ @-ms-keyframes play2 
+ {  
+    from {background-position: 0px;} 
+    to {background-position: -105px;} 
+ }
+ 
+ @-o-keyframes play2 
+ {
+    from {background-position: 0px;} 
+    to {background-position: -105px;} 
+ }
+
+/*INIMIGOS*/
+
+ .anima-3 { 
+    background-image: url("img/nave_inimigo.png");
+    animation: play .5s steps(2) infinite; 
+    
+    -webkit-animation: play .5s steps(2) infinite;
+    -moz-animation: play .5s steps(2) infinite;
+    -ms-animation: play .5s steps(2) infinite;
+     -o-animation: play .5s steps(2) infinite;
+}
+    
+@keyframes play { 
+    from {background-position: 0px;} 
+    to {background-position: -150px;} 
+}
+ @-webkit-keyframes play {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+ 
+ @-moz-keyframes play 
+ {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+ 
+ @-ms-keyframes play 
+ {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+ 
+ @-o-keyframes play 
+ {
+    from { background-position:0px; }
+    to { background-position: -150px; }
+ }
+
+ /*COLISAO*/
+
+ .anima-4 {
+
+    background-size: 75px;
+    width: 35px;
+    height: 30px;
+    background-image: url("img/red_alien.png");
+    animation: play3 .5s steps(2) infinite;
+
+    -webkit-animation: play3 .5s steps(2) infinite;
+    -moz-animation: play3 .5s steps(2) infinite;
+    -ms-animation: play3 .5s steps(2) infinite;
+    -o-animation: play3 .5s steps(2) infinite;
+    
+ }
+
+ @keyframes play3 
+{
+    from { background-position:0px; }
+    to { background-position: -157px; }
+}
+
+@-webkit-keyframes play3 {
+    from { background-position:0px; }
+    to { background-position: -75px; }
+ }
+ 
+ @-moz-keyframes play3 
+ {
+    from { background-position:0px; }
+    to { background-position: -75px; }
+ }
+ 
+ @-ms-keyframes play3 
+ {
+    from { background-position:0px; }
+    to { background-position: -75px; }
+ }
+ 
+ @-o-keyframes play3 
+ {
+    from { background-position:0px; }
+    to { background-position: -75px; }
+ }
+
+/*--------------PLACAR-----------------------*/
+
+#placar {
+    width: 400px;
+    height: 40px;
+    position: absolute;    
+    color: white;    
+    margin-left: 10px;    
+}
+
+h2 {
+    font-family: font-game;
+    font-size: 17px;
+    color: white;
+}
+
+/*----------------VIDA----------------------------*/
+
+#energia {
+    width: 140px;
+    height: 38px;
+    position: absolute;
+    left: 750px;
+    top: 7px;	
+    background-size: 140px;       
+}
+
+/*----------------PLACAR FINAL--------------------*/
+
+#placarFinal {
+    width: 450px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 15px;       
+      
+}
+
+#placarFinal h1 {
+    font-size: 60px;
+}
+
+
+#reinicia {
+    font-family: font-game;
+    font-size: 25px;
+    background-color: black;   
+    width: 300px;
+    height: 40px;
+    color: red; 
+    border: solid;
+    cursor: pointer;     
+}
+
+#reinicia:hover {
+    background-color: white;
+    color: red;
+}
+
+footer {
+    width: 750px;
+    height: 100px;
+    border: solid;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
