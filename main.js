@@ -142,7 +142,7 @@ function start() {
               recriar var eixo Y = gerar valor randomico novamente
               atualizar posicionamento inicial do eixo X1 e Y na div #fundoGame*/
 
-            if(eixo_X1 <= 500) { 
+            if(eixo_X1 <= 200) { 
                 eixo_Y = parseInt(Math.random() * 250);
                 $("#inimigo-1").css("left", 1100);
                 $("#inimigo-1").css("top", eixo_Y);
