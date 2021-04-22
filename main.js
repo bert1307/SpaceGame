@@ -39,7 +39,7 @@ function start() {
     var TECLA = { up: 38, dw: 40, sp: 32 } //array teclas
 
     var velocidade =5; //velocidade inimigo1
-    var eixo_Y = parseInt(Math.random() * 350); //conversaoInt(funcao-Math.random)retorna um valor entre 0 e 250(limite movimento #fundoGame) = posicionamento diferente no eixo Y  
+    var eixo_Y = parseInt(Math.random() * 250); //conversaoInt(funcao-Math.random)retorna um valor entre 0 e 250(limite movimento #fundoGame) = posicionamento diferente no eixo Y  
 
     var atirar = true;
 
@@ -106,7 +106,7 @@ function start() {
             $("#jogador").css("top",topo - 10); 
 
             //limite de movimento na div #fundoGame para cima
-            if (topo <= 0) {
+            if (topo <= 25) {
                 $("#jogador").css("top",topo + 10);
             }
         }
@@ -142,9 +142,9 @@ function start() {
               recriar var eixo Y = gerar valor randomico novamente
               atualizar posicionamento inicial do eixo X1 e Y na div #fundoGame*/
 
-            if(eixo_X1 <= 50) { 
-                eixo_Y = parseInt(Math.random() * 350);
-                $("#inimigo-1").css("left", 730);
+            if(eixo_X1 <= 500) { 
+                eixo_Y = parseInt(Math.random() * 250);
+                $("#inimigo-1").css("left", 1100);
                 $("#inimigo-1").css("top", eixo_Y);
             }
     }
@@ -160,8 +160,8 @@ function start() {
         $("#inimigo-2").css("left", eixo_X2 - 4);
 
             //limite esquerda #div fundoGame = 0 -> volta a posicao inicial "left"
-            if(eixo_X2 <= 0) { 
-                $("#inimigo-2").css("left", 775);
+            if(eixo_X2 <= 300) { 
+                $("#inimigo-2").css("left", 1100);
             }
     }
 
@@ -176,8 +176,8 @@ function start() {
         $("#et").css("left", eixo_X3 + 1);
 
             //limite direita #div fundoGame = 775 -> volta a posicao inicial "left"
-            if(eixo_X3 > 775) {
-                $("#et").css("left", 65);
+            if(eixo_X3 > 950) {
+                $("#et").css("left", 350);
             }
 
     }
@@ -213,7 +213,7 @@ function start() {
                 eixo_x5 = parseInt($("#disparo").css("left"));
                 $("#disparo").css("left", eixo_x5 + 15);
 
-                    if(eixo_x5 >= 730) { //limite direita fundoGame
+                    if(eixo_x5 >= 1100) { //limite direita fundoGame
                         
                         window.clearInterval(tempoDisparo); //remover a var 
                         tempoDisparo = null; //zerar var
@@ -251,7 +251,7 @@ function start() {
 
             //inimigo-1 volta a posicao inicial = left/top/movimento 
             eixo_Y = parseInt(Math.random() * 250);
-                $("#inimigo-1").css("left", 730);
+                $("#inimigo-1").css("left", 950);
                 $("#inimigo-1").css("top", eixo_Y);            
         }  
     //inimigo-2
